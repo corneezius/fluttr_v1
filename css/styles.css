@@ -1,0 +1,10 @@
+
+/* Base Styles *---------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Exo', sans-serif;
+}
