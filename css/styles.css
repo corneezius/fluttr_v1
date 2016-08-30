@@ -139,6 +139,24 @@ form#user-idea {
   }
 }
 
+button#submit-idea {
+  width: 40%;
+  margin: 20px 30%;
+  background-color: #FAAD39;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+button#submit-idea:hover {
+  background-color: #E19420;
+}
+
 /* Footer Styles *---------------------------------*/
 
 footer {
