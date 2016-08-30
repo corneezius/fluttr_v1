@@ -61,6 +61,50 @@ header {
   }
 }
 
+/* Main Content Styles *---------------------------------*/
+
+/* Title Intro */
+
+section#title-intro {
+  width: 100%;
+  margin-top: 70px;
+}
+
+img#feature-logo {
+  width: 20%;
+  margin: 70px 40% 20px 40%;
+}
+
+h1#title-statement {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+button#call-to-action {
+    width: 40%;
+    margin: 20px 30%;
+    background-color: #26A9E0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+button#call-to-action:hover {
+    background-color: #2298c9;
+}
+
+@media screen and (min-width: 768px) {
+  button#call-to-action {
+    font-size: 12px;
+  }
+}
+
 /* Footer Styles *---------------------------------*/
 
 footer {
