@@ -15,7 +15,7 @@ var ideaDatabase = [];
 //Front-End Logic:
 
 $(document).ready(function () {
-  debugger;
+
   $("#CallToActionButtonId").click(function() {
     // page scrolls down to the second page
     });
@@ -41,9 +41,9 @@ $(document).ready(function () {
 
 
 
-    $("#IdeaSection").prepend('<div class="newIdeaBox">' +
-                              '<p class = "newIdea>' + newIdeaEntered.ideaDesc + '</p>' +
-                              '<p class = "creatorName"> via' + newIdeaEntered.nameInput + '</p>' +
+    $("#IdeaSection").prepend('<div class="new-idea-box">' +
+                              '<p class = "new-idea>' + newIdeaEntered.ideaDesc + '</p>' +
+                              '<p class = "creator-name"> via' + newIdeaEntered.nameInput + '</p>' +
                               '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion >More</button>' +
                               '</div>');
 $(".discussion").first().click(function() {
