@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fluttr</title>
     <link href="https://fonts.googleapis.com/css?family=Exo:200" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -9,14 +10,20 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to Fluttr!</h1>
+      <div class="header-left">
+        <img class="header-left-item" id="logo-header" src="img/logo-white.png" alt="fluttr logo">
+        <h1 class="header-left-item">Fluttr</h1>
+      </div>
+      <div class="header-right">
+        <input type="text" id="global-search" class="form-control header-left-item" placeholder="Search">
+      </div>
     </header>
     <div class="container">
 
     </div>
 
     <footer>
-
+      <p>&copy; 2016 | Made in Philadelphia by the Fluttr team</p>
     </footer>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
