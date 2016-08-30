@@ -1,25 +1,28 @@
 // Business logic
 
-function Idea(name, ideaDesc, comments) {
-  this.name = name;
-  this.ideaDesc = ideaDesc;
-  this.comments = comments;
+function Idea(parameterNameInput, parameterIdeaDescription) {
+  this.nameInput = parameterNameInput;
+  this.ideaDesc = parameterIdeaDescription;
+  this.comments = [];
+  this.timeStamp = new Date();
+  this.ideaId = 1;
 }
-
+var ideaDatabase = [];
 // Idea.prototype.ideaBox = function() {
 //   this.
 // }
 
-//Front-End Logis:
+//Front-End Logic:
 
 $(document).ready(function () {
-  $("#CallToActionButtonId").click(function(event) {
-    page scrolls down to the second page
+  debugger;
+  $("#CallToActionButtonId").click(function() {
+    // page scrolls down to the second page
     });
-  event.preventDefault();
   $("form#ForId").submit(function(event) {
+    event.preventDefault();
     if (document.getElementById("anonymous").checked) {
-      var userName = "Anonymous"
+      var userName = "Anonymous";
     }
     else {
       var userName = $("input#EnterYourNameId").val();
@@ -27,9 +30,27 @@ $(document).ready(function () {
 
     var userIdea = $("input#OpenSoursedCollaborationId").val();
 
-    var newIdeaEntered = new Idea (userName, userIdea);
+    var newIdeaEntered = new Idea(userName, userIdea);
 
-    // User Interface Logic
+
+    ideaDatabase.push(newIdeaEntered);
+
+    var uniqueId = ideaDatabase.length;
+    newIdeaEntered.ideaId = uniqueId;
+
+
+
+
+    $("#IdeaSection").prepend('<div class="newIdeaBox">' +
+                              '<p class = "newIdea>' + newIdeaEntered.ideaDesc + '</p>' +
+                              '<p class = "creatorName"> via' + newIdeaEntered.nameInput + '</p>' +
+                              '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion >More</button>' +
+                              '</div>');
+$(".discussion").first().click(function() {
+  var thisButtonId = $(this).attr('id');
+
+})
+
 
   });
 });
