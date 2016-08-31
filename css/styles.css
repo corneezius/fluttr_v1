@@ -72,13 +72,17 @@ header {
 
 /* Main Content Styles *---------------------------------*/
 
+.site-view {
+  margin-bottom: 100px;
+}
+
 .form-section {
   margin-top: 100px;
   background-color: #ffffff;
 }
 
 video#bgvid {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -192,6 +196,40 @@ button#submit-idea {
 
 button#submit-idea:hover {
   background-color: #E19420;
+}
+
+/* Idea Box Styles */
+
+.idea-box {
+  display: inline-block;
+  float: left;
+  width: 90%;
+  height: auto;
+  margin: 2em 5%;
+  padding: 10px;
+  background-color: #26A9E0;
+  color: #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.discussion {
+  background-color: #FAAD39;
+}
+
+@media screen and (min-width: 500px) {
+  .idea-box {
+  width: 45%;
+  margin: 2.5em 2.5%;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .idea-box {
+  width: 28%;
+  margin: 1em 2.6%;
+  }
 }
 
 /* Footer Styles *---------------------------------*/

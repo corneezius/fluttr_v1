@@ -16,19 +16,16 @@ var ideaDatabase = [];
 
 $(document).ready(function () {
 
-  $("#CallToActionButtonId").click(function() {
-    // page scrolls down to the second page
-    });
-  $("form#ForId").submit(function(event) {
+  $("form#user-idea").submit(function(event) {
     event.preventDefault();
-    if (document.getElementById("anonymous").checked) {
+    if (document.getElementById("anonymous-check").checked) {
       var userName = "Anonymous";
     }
     else {
-      var userName = $("input#EnterYourNameId").val();
+      var userName = $("input#enter-name").val();
     };
 
-    var userIdea = $("input#OpenSoursedCollaborationId").val();
+    var userIdea = $("textarea#idea-description").val();
 
     var newIdeaEntered = new Idea(userName, userIdea);
 
@@ -41,10 +38,10 @@ $(document).ready(function () {
 
 
 
-    $("#IdeaSection").prepend('<div class="new-idea-box">' +
-                              '<p class = "new-idea>' + newIdeaEntered.ideaDesc + '</p>' +
-                              '<p class = "creator-name"> via' + newIdeaEntered.nameInput + '</p>' +
-                              '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion >More</button>' +
+    $(".idea-section").prepend('<div class="idea-box">' +
+                              '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
+                              '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
+                              '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion>More</button>' +
                               '</div>');
 $(".discussion").first().click(function() {
   var thisButtonId = $(this).attr('id');
