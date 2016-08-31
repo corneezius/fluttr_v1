@@ -9,6 +9,14 @@ body {
   font-family: 'Exo', sans-serif;
 }
 
+html, body, .main-content {
+  height: 100%;
+}
+
+.content-section {
+  min-height: 100%;
+}
+
 /* Header Styles *---------------------------------*/
 
 header {
@@ -50,7 +58,7 @@ header {
   margin: 0 10px;
 }
 
-@media screen and (min-width: 330px) {
+@media screen and (min-width: 360px) {
   #global-search {
     max-width: 120px;
   }
@@ -63,6 +71,26 @@ header {
 }
 
 /* Main Content Styles *---------------------------------*/
+
+.form-section {
+  margin-top: 100px;
+  background-color: #ffffff;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
 
 /* Title Intro */
 
@@ -80,6 +108,7 @@ h1#title-statement {
   font-size: 2em;
   text-align: center;
   font-weight: bold;
+  color: #ffffff;
 }
 
 button#call-to-action {
@@ -88,7 +117,7 @@ button#call-to-action {
   background-color: #26A9E0;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #ffffff;
   padding: 10px;
   text-align: center;
   text-decoration: none;
@@ -138,6 +167,14 @@ form#user-idea {
     margin: 20px 35%;
   }
 }
+
+#anonymous-check {
+  margin-bottom: 10px;
+}
+
+/*#enter-name {
+  display: none;
+}*/
 
 button#submit-idea {
   width: 40%;

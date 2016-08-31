@@ -18,28 +18,42 @@
         <input type="text" id="global-search" class="form-control header-left-item" placeholder="Search">
       </div>
     </header>
-    <section id="title-intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <img class="title-intro-item" id="feature-logo" src="img/newlogofinal.png" alt="fluttr logo">
-            <h1 id="title-statement">Let your ideas fly</h1>
-            <button id="call-to-action">Login</button>
+    <div class="main-content">
+      <div class="content-section">
+        <section id="title-intro">
+          <video playsinline autoplay muted loop id="bgvid">
+            <source src="video/fluttr7.mp4" type="video/mp4">
+          </video>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <img class="title-intro-item" id="feature-logo" src="img/newlogofinal.png" alt="fluttr logo">
+                <h1 id="title-statement">Let your ideas fly</h1>
+                <button id="call-to-action">Get Fluttred</button>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <form id="user-idea">
-            <h4>What's your idea?</h4>
-            <textarea class="form-control"></textarea>
-            <br>
-            <input type="checkbox" id="anonymous-check" checked>
-            <label for="anonymous-check">Anonymous</label>
-            <button id="submit-idea">Float it!</button>
-          </form>
+    </div>
+    <div class="main-content form-section">
+      <div class="content-section">
+        <div class="container site-view">
+          <div class="row">
+            <div class="col-xs-12">
+              <form id="user-idea">
+                <h4>What's your idea?</h4>
+                <textarea class="form-control"></textarea>
+                <br>
+                <input type="checkbox" id="anonymous-check" checked>
+                <label id="anonymous-check" for="anonymous-check">Anonymous</label>
+                <br>
+                <label for="enter-name">Name</label>
+                <input type="text" id="enter-name" class="form-control" placeholder="Enter your name">
+                <button id="submit-idea">Float it!</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -47,8 +61,10 @@
     <footer>
       <p>&copy; 2016 | Made in Philadelphia by the Fluttr team</p>
     </footer>
+
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/scroll.js"></script>
   </body>
 </html>
