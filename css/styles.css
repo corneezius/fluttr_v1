@@ -212,6 +212,17 @@ button#submit-idea:hover {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
+  text-align: center;
+}
+
+.new-idea {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.creator-name {
+  font-size: 14px;
+  font-style: italic;
 }
 
 .discussion {

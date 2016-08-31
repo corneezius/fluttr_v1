@@ -3,7 +3,7 @@
 function Idea(parameterNameInput, parameterIdeaDescription) {
   this.nameInput = parameterNameInput;
   this.ideaDesc = parameterIdeaDescription;
-  this.comments = [];
+  this.comments = ["comment 1", "comment2"];
   this.timeStamp = new Date();
   this.ideaId = 1;
 }
@@ -36,18 +36,22 @@ $(document).ready(function () {
     newIdeaEntered.ideaId = uniqueId;
 
 
-
-
-    $(".idea-section").prepend('<div class="idea-box">' +
+    $(".idea-section").prepend('<div class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
                               '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
                               '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
-                              '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion>More</button>' +
+                              '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#ideaModal">More</button>' +
                               '</div>');
 $(".discussion").first().click(function() {
   var thisButtonId = $(this).attr('id');
+  $("#ideaModal .modal-header").text(ideaDatabase[thisButtonId - 1].ideaDesc);
+  ideaDatabase[thisButtonId - 1].comments.forEach(function(currentComment){
+    $("#ideaModal .modal-body").prepend("<p class='visible-comment'>" + currentComment + "</p>");
+  })
 
-})
+});
 
+  $("input#enter-name").val("");
+  $("textarea#idea-description").val("");
 
   });
 });
