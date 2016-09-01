@@ -109,7 +109,7 @@ img#feature-logo {
 }
 
 h1#title-statement {
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
   font-weight: bold;
   color: #ffffff;
@@ -217,11 +217,12 @@ button#submit-idea:hover {
 
 .new-idea {
   font-size: 2.5em;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .creator-name {
   font-size: 14px;
+  font-weight: bold;
   font-style: italic;
 }
 
