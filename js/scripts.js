@@ -18,9 +18,9 @@ $(document).ready(function () {
 
 $("#anonymous-check").click(function() {
   if (document.getElementById("anonymous-check").checked) {
-  $("#hideName").hide();
+    $("#hideName").hide();
   } else {
-  $("#hideName").show();
+    $("#hideName").show();
   }
 });
 
@@ -43,9 +43,8 @@ $("#anonymous-check").click(function() {
     var uniqueId = ideaDatabase.length;
     newIdeaEntered.ideaId = uniqueId;
 
-    if (userIdea === "") {
-      alert("Please enter your idea in the field and try again!")
-
+    if (userIdea === "" || userName === "") {
+      alert("Please enter your name and idea in the field and try again!")
     }
     else {
 
