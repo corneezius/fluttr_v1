@@ -15,6 +15,14 @@ $(document).ready(function () {
 
   var currentID;
 
+$("#anonymous-check").click(function() {
+  if (document.getElementById("anonymous-check").checked) {
+  $("#hideName").hide();
+  } else {
+  $("#hideName").show();
+  }
+});
+
   $("form#user-idea").submit(function(event) {
     event.preventDefault();
     if (document.getElementById("anonymous-check").checked) {
