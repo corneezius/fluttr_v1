@@ -183,7 +183,7 @@ form#user-idea {
 button#submit-idea {
   width: 40%;
   margin: 20px 30%;
-  background-color: #FAAD39;
+  background-color: #091A82;
   border: none;
   border-radius: 10px;
   color: white;
@@ -195,7 +195,7 @@ button#submit-idea {
 }
 
 button#submit-idea:hover {
-  background-color: #E19420;
+  background-color: #051368;
 }
 
 /* Idea Box Styles */
@@ -213,6 +213,11 @@ button#submit-idea:hover {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   text-align: center;
+}
+
+.idea-logo-white {
+  width: 15%;
+  margin-bottom: 5px;
 }
 
 .new-idea {

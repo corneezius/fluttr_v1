@@ -48,10 +48,11 @@ $("#anonymous-check").click(function() {
     }
     else {
 
-      var bgColorArray = ['#FF6400', '#E138AA', '#00b398', '#B3001B', '#A54797', '#26A9E0'];
+      var bgColorArray = ['#FF6400', '#E138AA', '#00b398', '#B3001B', '#A54797'];
       selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
 
       $(".idea-section").prepend('<div style="background-color: ' + selectBG + ';" class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
+                                '<img class="idea-logo-white" src="img/logo-white.png" alt="fluttr logo">' +
                                 '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
                                 '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
                                 '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
