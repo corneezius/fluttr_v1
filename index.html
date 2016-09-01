@@ -46,11 +46,13 @@
                 <h4>What's your idea?</h4>
                 <textarea id="idea-description" class="form-control" maxlength="140" spellcheck="true"></textarea>
                 <br>
-                <input type="checkbox" id="anonymous-check" checked>
+                <input type="checkbox" id="anonymous-check" unchecked>
                 <label id="anonymous-check" for="anonymous-check">Anonymous</label>
                 <br>
-                <label for="enter-name">Name</label>
-                <input type="text" id="enter-name" class="form-control" placeholder="Enter your name">
+                <div id="hideName">
+                  <label for="enter-name">Name</label>
+                  <input type="text" id="enter-name" class="form-control" placeholder="Enter your name">
+                </div>
                 <button id="submit-idea">Float it!</button>
               </form>
             </div>

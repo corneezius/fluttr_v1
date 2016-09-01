@@ -15,6 +15,14 @@ $(document).ready(function () {
 
   var currentID;
 
+$("#anonymous-check").click(function() {
+  if (document.getElementById("anonymous-check").checked) {
+  $("#hideName").hide();
+  } else {
+  $("#hideName").show();
+  }
+});
+
   $("form#user-idea").submit(function(event) {
     event.preventDefault();
     if (document.getElementById("anonymous-check").checked) {
@@ -32,12 +40,18 @@ $(document).ready(function () {
 
     var uniqueId = ideaDatabase.length;
     newIdeaEntered.ideaId = uniqueId;
+    
+    if (userIdea === "") {
+      alert("Please enter your idea in the field and try again!")
+    } else {
+      $(".idea-section").prepend('<div class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
+      '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
+      '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
+      '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
+      '</div>');
+    };
 
-    $(".idea-section").prepend('<div class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
-                              '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
-                              '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
-                              '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
-                              '</div>');
+
 
 
     $(".discussion").first().click(function() {
