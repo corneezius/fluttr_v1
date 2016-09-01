@@ -265,6 +265,11 @@ button#submit-idea:hover {
   color: #ffffff;
 }
 
+.modal-header {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 /* Footer Styles *---------------------------------*/
 
 footer {
