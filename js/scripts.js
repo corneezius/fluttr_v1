@@ -38,6 +38,9 @@ $("#anonymous-check").click(function() {
 
     ideaDatabase.push(newIdeaEntered);
 
+    var uniqueId = ideaDatabase.length;
+    newIdeaEntered.ideaId = uniqueId;
+    
     if (userIdea === "") {
       alert("Please enter your idea in the field and try again!")
     } else {
@@ -48,8 +51,6 @@ $("#anonymous-check").click(function() {
       '</div>');
     };
 
-    var uniqueId = ideaDatabase.length;
-    newIdeaEntered.ideaId = uniqueId;
 
 
 
