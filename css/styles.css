@@ -271,9 +271,15 @@ button#submit-idea:hover {
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 .modal-header {
   font-size: 25px;
   font-weight: bold;
+=======
+.commentNameAllign {
+  text-align: right;
+  padding-right: 30px;
+>>>>>>> 63c6f7c617865df0d2711d6fb58e7389d05a9b05
 }
 
 /* Footer Styles *---------------------------------*/

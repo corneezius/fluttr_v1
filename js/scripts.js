@@ -45,6 +45,7 @@ $("#anonymous-check").click(function() {
 
     if (userIdea === "") {
       alert("Please enter your idea in the field and try again!")
+
     }
     else {
 
@@ -58,25 +59,34 @@ $("#anonymous-check").click(function() {
                                 '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
                                 '</div>');
 
-      $(".discussion").first().click(function() {
-        $(".visible-comment").text("");
-        var thisButtonId = $(this).attr('id');
-        currentID = thisButtonId;
-        $("#idea-modal .modal-header").text(ideaDatabase[thisButtonId - 1].ideaDesc);
-        ideaDatabase[thisButtonId - 1].comments.forEach(function(currentComment) {
-          $("#idea-modal .modal-body").prepend("<p class='visible-comment'>" + currentComment + "</p>");
-        });
+    $(".discussion").first().click(function() {
+      $(".visible-name").text("");
+      $(".visible-comment").text("");
+      var thisButtonId = $(this).attr('id');
+      currentID = thisButtonId;
+      $("#idea-modal .modal-header").text(ideaDatabase[thisButtonId - 1].ideaDesc);
+
+      ideaDatabase[thisButtonId - 1].comments.forEach(function(namePlusComment) {
+        $("#idea-modal .modal-body").prepend("<p class='visible-comment'>" + namePlusComment + "</p>");
       });
 
-      $(".submit-comment").first().click(function() {
-        var newComment = $(".input-comment").val();
-        $("#idea-modal .modal-body").prepend("<p class='visible-comment'>" + newComment + "</p>");
-        ideaDatabase[currentID - 1].comments.push(newComment);
-        $(".input-comment").val("");
-      });
+    });
 
-      $("input#enter-name").val("");
-      $("textarea#idea-description").val("");
+    $(".submit-comment").first().click(function() {
+      var commentatorName = $("#commentName").val().toUpperCase() + " ";
+      var newComment = $(".input-comment").val();
+      var namePlusComment = commentatorName + newComment;
+      ideaDatabase[currentID - 1].comments.push(namePlusComment);
+      $("#idea-modal .modal-body").prepend("<p class='visible-comment'>" + namePlusComment + "</p>");
+
+      $(".input-comment").val("");
+      $("#commentName").val("");
+    });
+
+    $("input#enter-name").val("");
+    $("textarea#idea-description").val("");
+    $("input#commentName").val("");
+
     }
   });
 
