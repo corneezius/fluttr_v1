@@ -243,6 +243,28 @@ button#submit-idea:hover {
   }
 }
 
+/* Modal Styles *---------------------------------*/
+
+#model-content-box {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: solid 3px #26A9E0;
+  background-color: #ffffff;
+  color: #26A9E0;
+}
+
+#model-content-box button {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+#model-content-box button#post-comment {
+  background-color: #FAAD39;
+  color: #ffffff;
+}
+
 /* Footer Styles *---------------------------------*/
 
 footer {
