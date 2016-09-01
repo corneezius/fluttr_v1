@@ -265,6 +265,11 @@ button#submit-idea:hover {
   color: #ffffff;
 }
 
+.commentNameAllign {
+  text-align: right;
+  padding-right: 30px;
+}
+
 /* Footer Styles *---------------------------------*/
 
 footer {
