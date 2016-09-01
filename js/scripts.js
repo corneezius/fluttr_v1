@@ -15,6 +15,7 @@ $(document).ready(function () {
 
   var currentID;
 
+
   $("form#user-idea").submit(function(event) {
     event.preventDefault();
     if (document.getElementById("anonymous-check").checked) {
@@ -33,7 +34,10 @@ $(document).ready(function () {
     var uniqueId = ideaDatabase.length;
     newIdeaEntered.ideaId = uniqueId;
 
-    $(".idea-section").prepend('<div class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
+    var bgColorArray = ['#FF6400','#FFD740','#E138AA', '#34D1B2'];
+    selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+    $(".idea-section").prepend('<div style="background-color: ' + selectBG + ';" class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
                               '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
                               '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
                               '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
