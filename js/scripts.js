@@ -15,6 +15,7 @@ $(document).ready(function () {
 
   var currentID;
 
+
 $("#anonymous-check").click(function() {
   if (document.getElementById("anonymous-check").checked) {
   $("#hideName").hide();
@@ -22,6 +23,7 @@ $("#anonymous-check").click(function() {
   $("#hideName").show();
   }
 });
+
 
   $("form#user-idea").submit(function(event) {
     event.preventDefault();
@@ -43,13 +45,19 @@ $("#anonymous-check").click(function() {
 
     if (userIdea === "") {
       alert("Please enter your idea in the field and try again!")
-    } else {
-      $(".idea-section").prepend('<div class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
-      '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
-      '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
-      '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
-      '</div>');
-    };
+
+    }
+    else {
+
+      var bgColorArray = ['#FF6400', '#E138AA', '#00b398', '#B3001B', '#A54797'];
+      selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+
+      $(".idea-section").prepend('<div style="background-color: ' + selectBG + ';" class="col-xs-12 col-sm-6 col-md-4 idea-box">' +
+                                '<img class="idea-logo-white" src="img/logo-white.png" alt="fluttr logo">' +
+                                '<p class="new-idea">' + newIdeaEntered.ideaDesc + '</p>' +
+                                '<p class="creator-name"> via ' + newIdeaEntered.nameInput + '</p>' +
+                                '<button id="'+ newIdeaEntered.ideaId + '" class="btn btn-secondary btn-sm discussion" data-toggle="modal" data-target="#idea-modal">More</button>' +
+                                '</div>');
 
     $(".discussion").first().click(function() {
       $(".visible-name").text("");
@@ -79,6 +87,7 @@ $("#anonymous-check").click(function() {
     $("textarea#idea-description").val("");
     $("input#commentName").val("");
 
+    }
   });
 
 });
