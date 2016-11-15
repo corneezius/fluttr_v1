@@ -4,6 +4,8 @@
 
 #### By _**Cornelius Range, Nicolas Hurtado, Sam Peppard, Lisa MacCarrigan, and Anand Angalig**_
 
+![screenshot of project main page](/public/images/web-app.png)
+
 ## Description
 
 _This application will help users find collaborators and feedback for their ideas and also  discover new ideas to collaborate on._
@@ -11,7 +13,7 @@ _This application will help users find collaborators and feedback for their idea
 
 ## Setup/Installation Requirements
 
-* _Go to_ :  https://github.com/Corneezius/fluttr_v1.git 
+* _Go to_ :  https://github.com/Corneezius/fluttr_v1.git
 * _Clone or download this repository to your local machine_
 * _Open index.html in your web-browser to launch the application_
 
