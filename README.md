@@ -4,7 +4,7 @@
 
 #### By _**Cornelius Range, Nicolas Hurtado, Sam Peppard, Lisa MacCarrigan, and Anand Angalig**_
 
-![screenshot of project main page](/public/images/web-app.png)
+![screenshot of project main page](/img/web-app.png)
 
 ## Description
 
