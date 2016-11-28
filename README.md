@@ -6,12 +6,12 @@
 
 ## Description
 
-_This application will help users find collaborators and feedback for their ideas and also  discover new ideas to collaborate on._
+_This application enables users to share their ideas, connect with potential collaborators, and receive feedback._
 
 
 ## Setup/Installation Requirements
 
-* _Go to_ :  https://github.com/Corneezius/fluttr_v1.git 
+* _Go to_:  https://github.com/Corneezius/fluttr_v1.git 
 * _Clone or download this repository to your local machine_
 * _Open index.html in your web-browser to launch the application_
 
@@ -19,14 +19,14 @@ _This application will help users find collaborators and feedback for their idea
 
 * _Behavior: App scrolls to idea section_
   * _Input: Click fly button on homepage_
-  * _Output: Pages moves down to idea section_
+  * _Output: Page moves down to idea section_
 
 * _Behavior: Name input appears on form_
-  * _Input: anonymous box is unchecked_
-  * _Output: name text field appears_
+  * _Input: Anonymous box is unchecked_
+  * _Output: Name input text field appears_
 
 * _Behavior: Idea box appears on screen underneath submit bar_
-  * _Input: User writes idea and presses submit button_
+  * _Input: User types idea and presses submit button_
   * _Output: Idea box appears underneath submit bar_
 
 
@@ -40,7 +40,7 @@ _If you have any suggestions contact Nick at nickh93@outlook.com_
 
 ## Technologies Used
 
-_HTML, CSS, JavaScript, JQuery, Computer science skills, web browsin'_
+_HTML, CSS, JavaScript, JQuery, and Behavior Driven Development._
 
 ### License
 
