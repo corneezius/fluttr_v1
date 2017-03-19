@@ -275,7 +275,7 @@ button#submit-idea:hover {
   font-size: 25px;
   font-weight: bold;
 }
-  
+
 /* Footer Styles *---------------------------------*/
 
 footer {
@@ -290,4 +290,9 @@ footer {
   color: #ffffff;
   text-align: center;
   z-index: 1;
+}
+
+.main-content {
+  position: relative;
+  background-color: rgba(41,128,185 ,0.6);
 }
